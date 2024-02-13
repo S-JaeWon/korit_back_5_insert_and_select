@@ -25,8 +25,8 @@ public class CommonFilter extends HttpFilter implements Filter {
 		HttpServletResponse httpServletResponse = (HttpServletResponse) response;
 		
 		// cors
-		httpServletResponse.setHeader("Access-Control-Allow-Headers", "Content-Type");
-		httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
+		httpServletResponse.setHeader("Access-Control-Allow-Headers", "Content-Type"); // 주소가 같으면 cros X -> 다르면 cors O, "Content-Type" ->  컨텐츠 타입(텍스트 등)변경 허용  
+		httpServletResponse.setHeader("Access-Control-Allow-Origin", "*"); // * -> 모든 주소를 요청 허가 
 		// 인코딩
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
